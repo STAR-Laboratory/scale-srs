@@ -73,7 +73,7 @@ This artifact covers two aspects of the results from the paper:
 
 ### Prepare Traces and Run the artifact.
 
-* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and put them into the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
+* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and extract them into the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
 * **Run the artifact**: `cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
  
 ### Compile
