@@ -1,5 +1,4 @@
 #  Scalable and Secure Row-Swap: Efficient and Safe Row Hammer Mitigation in Memory Systems (HPCA 2023)
-**Authors**: Jeonghyun Woo (UBC), Gururaj Saileshwar (Georgia Tech), and Prashant Nair (UBC)
 
 To appear in [HPCA 2023](https://hpca-conf.org/2023/)
 
@@ -21,7 +20,11 @@ This artifact covers two aspects of the results from the paper:
 
 <!-- TODO: Change the url after creating random GitHub repo -->
 * **Fetch the code**: `git clone https://github.com/STAR-Laboratory/scale-srs`
-* **Run the artifact**: `cd scale-srs/security_analysis/montecarlo-event; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results, and generate the pdf file of Figure 6). You may also follow these steps manually.
+* **Run the artifact**: 
+
+			$ cd scale-srs/security_analysis/montecarlo-event/
+			$ ./run_artifact.sh
+These commands run all the following steps (compile, execute, collate results, and generate the pdf file of Figure 6). You may also follow these steps manually.
 ### Compile
 
 1. Compile the Event-driven Monte Carlo Code with the following steps
@@ -73,8 +76,12 @@ This artifact covers two aspects of the results from the paper:
 
 ### Prepare Traces and Run the artifact.
 
-* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and extract them into the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
-* **Run the artifact**: `cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
+* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and move them into the `scale-srs/perf_analysis/input/` folder. Downloaded file (`scale-srs-traces.tar.gz`) size should be ~8GB in size. Then change your difectory into the `scale-srs/perf_analysis/input/` folder, then type `tar -zxvf scale-srs-traces.tar.gz`. After finishing these steps, you should see `BIOBENCH, COMM, GAP, PARSEC, SPEC2K17, and SPEC2K6` folders inside the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
+* **Run the artifact**: 
+
+			$ cd scale-srs/perf_analysis
+			$ ./run_artifact.sh
+These commands run all the following steps (compile, execute, collate results, and generate the pdf file of Figure 14). You may also follow these steps manually.
  
 ### Compile
 
@@ -114,7 +121,7 @@ This artifact covers two aspects of the results from the paper:
 5. Check the performance of Scale-SRS and RRS normalized to Baseline using the following command. This will generate the `data.csv` file in the `scale-srs/perf_analysis/simscript` folder.  
   
 	    	$ cd scale-srs/perf_analysis/simscript/
-
+			$ ./plot.sh
 	    -- These numbers should be reflective of Figure 14 -- Performance Numbers.
 
 ### Generate Figure 14

@@ -112,8 +112,6 @@ echo "###################"
 echo ""
 
 cd simscript
-
-# Normalized performance for workloads in the left half of Fig 14, i.e., workloads with at least one row having > 800 activations / 64ms 
 ./plot.sh
 cd ../ ;
 echo "Collating Results Completed!"
