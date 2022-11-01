@@ -6,14 +6,13 @@ To appear in [HPCA 2023](https://hpca-conf.org/2023/)
 ## Introduction
 This artifact covers two aspects of the results from the paper: 
 
-* Security analysis of our Juggernaut attack against Randomized Row-Swap (RRS): A [Bins and Buckets](https://en.wikipedia.org/wiki/Balls_into_bins_problem) model of the Juggernaut attack is provided in a C++ program to validate our statistical security analysis. Our program is based on the event-driven Monte Carlo simulations for faster simulations since naive Monte Carlo Simulations could spend a lot of time, like a few days or a week, for the simulations. We provide scripts to compile our simulators and to recreate the results shown in **Figure 6**.
+* **Security analysis of our Juggernaut attack against Randomized Row-Swap (RRS)**: A [Bins and Buckets](https://en.wikipedia.org/wiki/Balls_into_bins_problem) model of the Juggernaut attack is provided in a C++ program to validate our statistical security analysis. Our program is based on the event-driven Monte Carlo simulations for faster simulations since naive Monte Carlo Simulations could spend a lot of time, like a few days or a week, for the simulations. We provide scripts to compile our simulators and to recreate the results shown in **Figure 6**.
 
 * **Performance analysis of our Scalable and Secure Row-Swap (Scale-SRS) and RRS**: We provide the C code for the implementation of Scale-SRS and RRS which is encapsulated within the USIMM memory system simulator. The Scale-SRS and RRS structures and operations are implemented within the memory controller module in our artifact. We provide scripts to compile our simulator and run the baseline, Scale-SRS, and RRS for all the workloads we studied in this paper. We also provide scripts to parse the results and collate the performance results shown in **Figure 14**.
 
 ## Requirements for Security Evaluations for the Juggernaut Attack:
 * **Software Dependencies**: C++, Python3, g++ (tested to compile successfully with the version: 9.4.0 and 11.3.0), and Python3 Packages (pandas and matplotlib).
-* **Hardware Dependencies**: A single core CPU desktop/laptop will allow a 100,000 iterations Monte Carlo simulations in 3-5 minutes.
-<!-- TODO: Change the minutes after checking with my laptop -->
+* **Hardware Dependencies**: A single core CPU desktop/laptop will allow a 100,000 iterations Monte Carlo simulations in 1-3 minutes.
 * **Data Dependencies**: Several input values, such as the number of attack rounds and the success probability of attack in a single refresh interval ($p_{k, T_S}$) in Equation 6 in the paper, are required to run the simulation. We generated these values following the equations in Section III-B in the paper and included the values in `scale-srs/security_analysis/montecarlo-event/simscript/input`.
 
 ## Steps for Security Evaluations
@@ -74,10 +73,8 @@ This artifact covers two aspects of the results from the paper:
 
 ### Prepare Traces and Run the artifact.
 
-<!-- TODO: Add instructions to prepare traces here -->
-* **Prepare Traces**:  
+* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and put them into the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
 * **Run the artifact**: `cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
-* **Note:** Our artifact requires  memory-access traces as input and assumes that they are available in `/input` folder. We provide information on how traces can be generated at the end of the README.md.
  
 ### Compile
 
@@ -114,40 +111,18 @@ This artifact covers two aspects of the results from the paper:
 
 `ONLY AFTER ALL SIMULATIONS COMPLETE --> typically 15-16 hours later, you may try to collate the results`  
 
-5. Check the performance of Scale-SRS and RRS normalized to Baseline using the following command (Figure 14).  
+5. Check the performance of Scale-SRS and RRS normalized to Baseline using the following command. This will generate the `data.csv` file in the `scale-srs/perf_analysis/simscript` folder.  
   
-	    --> Script to collate results is in simscript. Individual results for all workloads and collated results are stored in scale-srs/perf_analysis/output/    
-     	    $ cd scale-srs/perf_analysis/simscript/
-
-	    --> Normalized performance for workloads in the left half of Fig 14, i.e., workloads with at least one row having > 800 activations / 64ms            
-            $ ./getdata.pl -s ADDED_IPC -w interest_name -n 0 -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-	    
-	    --> Normalized performance for workload suites in the right half of Fig 14, i.e. Averages.           
-	    --> Gmean value ONLY for SPEC 2006
-            $ ./getdata.pl -s ADDED_IPC -w spec2006_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-            
-	    --> Gmean value ONLY for SPEC 2017            
-            $ ./getdata.pl -s ADDED_IPC -w spec2017_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-            
-	    --> Gmean value ONLY for GAP            
-            $ ./getdata.pl -s ADDED_IPC -w gap_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-
-		--> Gmean value ONLY for COMM                              
-            $ ./getdata.pl -s ADDED_IPC -w comm_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-	    
-		--> Gmean value ONLY for PARSEC                     
-            $ ./getdata.pl -s ADDED_IPC -w parsec_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-            
-	    --> Gmean value ONLY for BIOBENCH                                 
-            $ ./getdata.pl -s ADDED_IPC -w biobench_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-
-	    --> Gmean value ONLY for MIX                              
-            $ ./getdata.pl -s ADDED_IPC -w mix_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
-
-	    --> Gmean value for ALL benchmarks                              
-            $ ./getdata.pl -s ADDED_IPC -w all78 -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
+	    	$ cd scale-srs/perf_analysis/simscript/
 
 	    -- These numbers should be reflective of Figure 14 -- Performance Numbers.
+
+### Generate Figure 14
+
+6. Generate the pdf file of Figure 14 using the following commands.
+
+			$ cd scale-srs/perf_analysis/graph/
+			$ python3 figure14.py
 ## Input Trace Files
 Our simulator requires that memory-access traces are generated and available in `/input` folder.  
 * You can generate the memory access traces (in the trace format described at the end of the README) for any program with Intel Pintool (v2.12) and use it with our artifact.  
@@ -168,5 +143,4 @@ Each entry in our trace has the following format and has information regarding o
    - **DontCare1-4byte**, **DontCare2-4byte**: These fields are ignored by the simulator (can be 0s in the trace).  
 
 ### Trace Generation
-We use Intel Pintool to instrument execution of a program and get its memory accesses (similar to the intel starter [pintool](https://github.com/jingpu/pintools/blob/master/source/tools/SimpleExamples/pinatrace.cpp), here is a useful [guide](https://mahmoudhatem.wordpress.com/2016/11/07/tracing-memory-access-of-an-oracle-process-intel-pintools/) to understand this). We obtain the memory accesses for a representative section of the program and filter the memory accesses through a two level non-inclusive cache hierarchy implemented within the pintool, to obtain the L2-Miss Trace. We produce the trace file by writing each line of the trace to a compressed file stream. We generated the traces for SPEC 2k6, 2k17 and GAP using this methodology and reformatted the traces for PARSEC and COMM provided the USIMM distribution ([link](http://utaharch.blogspot.com/2012/02/usimm.html)). Our traces we used for this project are available at: https://www.dropbox.com/s/a6cdraqac79fg53/rrs_benchmarks.tar?dl=0.
-<!-- TODO: Change URL after uploading the traces -->
+We use Intel Pintool to instrument execution of a program and get its memory accesses (similar to the intel starter [pintool](https://github.com/jingpu/pintools/blob/master/source/tools/SimpleExamples/pinatrace.cpp), here is a useful [guide](https://mahmoudhatem.wordpress.com/2016/11/07/tracing-memory-access-of-an-oracle-process-intel-pintools/) to understand this). We obtain the memory accesses for a representative section of the program and filter the memory accesses through a two level non-inclusive cache hierarchy implemented within the pintool, to obtain the L2-Miss Trace. We produce the trace file by writing each line of the trace to a compressed file stream. We generated the traces for SPEC 2k6, 2k17 and GAP using this methodology and reformatted the traces for PARSEC and COMM provided the USIMM distribution ([link](http://utaharch.blogspot.com/2012/02/usimm.html)). Our traces we used for this project are available at: https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing.

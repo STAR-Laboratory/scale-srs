@@ -116,7 +116,7 @@ while (<$inFile>) {
     printf("\n");
   }
   if($count == 64){
-    printf(",,,\n");
+    printf(" ,,\n");
   }
   if($count == 65){
     printf("\n");

@@ -13,7 +13,8 @@ echo "#####################"
 echo "0. Trace Inputs"
 echo "#####################"
 echo ""
-echo "Note: This artifact requires memory-access traces to be already available." 
+echo "Note: This artifact requires memory-access traces to be already available."
+echo "Prepare traces following the instruction" 
 
 # 1. Compile the USIMM
 echo "---------------------------"
@@ -113,15 +114,17 @@ echo ""
 cd simscript
 
 # Normalized performance for workloads in the left half of Fig 14, i.e., workloads with at least one row having > 800 activations / 64ms 
-./getdata.pl -s ADDED_IPC -w interest_name -n 0 -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/
+./plot.sh
+cd ../ ;
+echo "Collating Results Completed!"
 
-# Normalized Perf. of RRS (Gmean) for SPEC-2006, SPEC-2017, GAP, PARSEC, BIOBENCH, COMM, MIX, ALL-78     
-echo ""     
-./getdata.pl -s ADDED_IPC -w spec2006_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/ | sed 's/Gmean/SPEC2K6-29/'  | tail -n1 
-./getdata.pl -s ADDED_IPC -w spec2017_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/ | sed 's/Gmean/SPEC2K17-22/' | tail -n1 
-./getdata.pl -s ADDED_IPC -w gap_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/      | sed 's/Gmean/GAP-6/'	      | tail -n1 
-./getdata.pl -s ADDED_IPC -w comm_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/     | sed 's/Gmean/COMM-5/'      | tail -n1
-./getdata.pl -s ADDED_IPC -w parsec_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/   | sed 's/Gmean/PARSEC-5/'    | tail -n1    
-./getdata.pl -s ADDED_IPC -w biobench_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/ | sed 's/Gmean/BIOBENCH-2/'  | tail -n1     
-./getdata.pl -s ADDED_IPC -w mix_name -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/      | sed 's/Gmean/MIX-6/'	      | tail -n1
-./getdata.pl -s ADDED_IPC -w all78 -n 0 -gmean -d ../output/8c_2ch_baseline/ ../output/8c_2ch_rrs1K/ ../output/8c_2ch_srs1K/         | sed 's/Gmean/ALL-78/'      | tail -n1 
+## 6. Generating Figure 14
+echo "---------------------------"
+echo ""
+echo "###################"
+echo "6. Generating Figure 14"
+echo "###################"
+echo ""
+cd graph/
+python3 figure14.py 
+echo "Generating Figure 14 Completed!"
