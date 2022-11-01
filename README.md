@@ -6,21 +6,34 @@ To appear in [HPCA 2023](https://hpca-conf.org/2023/)
 ## Introduction
 This artifact covers two aspects of the results from the paper: 
 
-* Security analysis of our Juggernaut attack against Randomized Row-Swap (RRS): 
+* Security analysis of our Juggernaut attack against Randomized Row-Swap (RRS): A [Bins and Buckets](https://en.wikipedia.org/wiki/Balls_into_bins_problem) model of the Juggernaut attack is provided in a C++ program to validate our statistical security analysis. Our program is based on the event-driven Monte Carlo simulations for faster simulations since naive Monte Carlo Simulations could spend a lot of time , like a few days or a week, for the simulations. We provide scripts to compile our simulators and to recreate the results shown in **Figure 6**.
 
-* Performance analysis of our Scalable and Secure Row-Swap (Scale-SRS) and RRS: We provide the C code for the implementation of Scale-SRS and RRS which is encapsulated within the USIMM memory system simulator. The Scale-SRS and RRS structures and operations are implemented within the memory controller module in our artifact. We provide scripts to compile our simulator and run the baseline, Scale-SRS, and RRS for all the workloads we studied in this paper. We also provide scripts to parse the results and collate the performance results shown in Figure 14.
+* **Performance analysis of our Scalable and Secure Row-Swap (Scale-SRS) and RRS**: We provide the C code for the implementation of Scale-SRS and RRS which is encapsulated within the USIMM memory system simulator. The Scale-SRS and RRS structures and operations are implemented within the memory controller module in our artifact. We provide scripts to compile our simulator and run the baseline, Scale-SRS, and RRS for all the workloads we studied in this paper. We also provide scripts to parse the results and collate the performance results shown in **Figure 14**.
 
+## Requirements for Security Evaluations for the Juggernaut Attack:
+* **Software Dependencies**: C++, Python3, g++ (tested to compile successfully with the version: 9.4.0 and 11.3.0), and Python3 Packages (pandas and matplotlib).
+* **Hardware Dependencies**: A single core CPU desktop/laptop will allow a 100,000 iterations Monte Carlo simulations in 3-5 minutes.
+<!-- TODO: Change the minutes after checking with my laptop -->
+* **Data Dependencies**: Several input values, such as the number of attack rounds and the success probability of attack in a single refresh interval ($p_{k, T_S}$) in Equation 6 in the paper, are required to run the simulation. We generated these values following the equations in Section III-B in the paper and included the values in `scale-srs/security_analysis/montecarlo-event/simscript/input`.
+
+## Steps for Security Evaluations
+
+### Clone the artifact and run the code.
+
+<!-- TODO: Change the url after creating random GitHub repo -->
+* **Fetch the code**: git `git clone https://github.com/STAR-Laboratory/scale-srs`
+* **Run the artifact**: cd scale-srs/security_analysis/; 
 ## Requirements for Performance Evaluations in USIMM Memory System Simulator:
 * **Software Dependencies**: Perl (for scripts to run experiments and collate results) and gcc (tested to compile successfully with the version: 11.3.0).
 * **Hardware Dependencies**: For running all the benchmarks, a CPU with lots of memory (128GB+) and cores (64+).
 * **Trace Dependencies**: Our simulator requires traces of memory-accesses for benchmarks (filtered through a L1 and L2 cache). We generate these traces using an Intel Pintool (version 2.12), similar to this pin-tool. However, traces extracted in the format described at the end of the README by any methodology (e.g., any Pin version) would be supported.
-## Compiling and Executing BASELINE, Scale-SRS, and RRS
+## Steps for Performance Evaluations
 
-### Clone the artifact and run the code.
+### Prepare Traces and Run the artifact.
 
-* **Fetch the code**: `https://github.com/STAR-Laboratory/scale-srs`
+<!-- TODO: Add instructions to prepare traces here -->
 * **Prepare Traces**:  
-* **Run the artifact**: `cd rrs; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
+* **Run the artifact**: cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
 * **Note:** Our artifact requires  memory-access traces as input and assumes that they are available in `/input` folder. We provide information on how traces can be generated at the end of the README.md.
  
 ### Compile
