@@ -21,8 +21,51 @@ This artifact covers two aspects of the results from the paper:
 ### Clone the artifact and run the code.
 
 <!-- TODO: Change the url after creating random GitHub repo -->
-* **Fetch the code**: git `git clone https://github.com/STAR-Laboratory/scale-srs`
-* **Run the artifact**: cd scale-srs/security_analysis/; 
+* **Fetch the code**: `git clone https://github.com/STAR-Laboratory/scale-srs`
+* **Run the artifact**: `cd scale-srs/security_analysis/montecarlo-event; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results, and generate the pdf file of Figure 6). You may also follow these steps manually.
+### Compile
+
+1. Compile the Event-driven Monte Carlo Code with the following steps
+         
+     	    $ cd scale-srs/security_analysis/montecarlo-event/
+     	    $ make clean
+     	    $ make
+### Execute
+2. Run Row Hammer threshold of 4800 with the following command from the simscript folder
+         
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ ./run_exp_4800.sh
+
+3. Run Row Hammer threshold of 2400 with the following command from the simscript folder
+         
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ ./run_exp_2400.sh
+
+4. Run Row Hammer threshold of 1200 with the following command from the simscript folder
+         
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ ./run_exp_1200.sh
+### Collate Results  
+
+5. Check the successful attack time of Juggernaut against RRS using the following command. This will generate csv files (`aggregate_trh_1200/2400/4800.csv`) in the `scale-srs/security_analysis/montecarlo-event/results` folder. 
+		
+		--> Collating results for the RH threshold of 4800
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ python3 get_results_4800.py
+
+		--> Collating results for the RH threshold of 2400
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ python3 get_results_2400.py
+
+		--> Collating results for the RH threshold of 1200
+     	    $ cd scale-srs/security_analysis/montecarlo-event/simscript/
+     	    $ python3 get_results_1200.py
+### Generate Figure 6
+
+6. Generate the pdf file of Figure 6 using the following commands.
+
+			$ cd scale-srs/security_analysis/montecarlo-event/graph
+			$ python3 figure6.py
 ## Requirements for Performance Evaluations in USIMM Memory System Simulator:
 * **Software Dependencies**: Perl (for scripts to run experiments and collate results) and gcc (tested to compile successfully with the version: 11.3.0).
 * **Hardware Dependencies**: For running all the benchmarks, a CPU with lots of memory (128GB+) and cores (64+).
@@ -33,7 +76,7 @@ This artifact covers two aspects of the results from the paper:
 
 <!-- TODO: Add instructions to prepare traces here -->
 * **Prepare Traces**:  
-* **Run the artifact**: cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
+* **Run the artifact**: `cd scale-srs/perf_analysis; ./run_artifact.sh`. This command runs all the following steps (compile, execute, collate results). You may also follow these steps manually.
 * **Note:** Our artifact requires  memory-access traces as input and assumes that they are available in `/input` folder. We provide information on how traces can be generated at the end of the README.md.
  
 ### Compile
@@ -126,3 +169,4 @@ Each entry in our trace has the following format and has information regarding o
 
 ### Trace Generation
 We use Intel Pintool to instrument execution of a program and get its memory accesses (similar to the intel starter [pintool](https://github.com/jingpu/pintools/blob/master/source/tools/SimpleExamples/pinatrace.cpp), here is a useful [guide](https://mahmoudhatem.wordpress.com/2016/11/07/tracing-memory-access-of-an-oracle-process-intel-pintools/) to understand this). We obtain the memory accesses for a representative section of the program and filter the memory accesses through a two level non-inclusive cache hierarchy implemented within the pintool, to obtain the L2-Miss Trace. We produce the trace file by writing each line of the trace to a compressed file stream. We generated the traces for SPEC 2k6, 2k17 and GAP using this methodology and reformatted the traces for PARSEC and COMM provided the USIMM distribution ([link](http://utaharch.blogspot.com/2012/02/usimm.html)). Our traces we used for this project are available at: https://www.dropbox.com/s/a6cdraqac79fg53/rrs_benchmarks.tar?dl=0.
+<!-- TODO: Change URL after uploading the traces -->

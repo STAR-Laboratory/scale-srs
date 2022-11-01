@@ -187,8 +187,6 @@ int main(int argc, char* argv[]){
     init_by_array64(init, length);
     // -------------------------------------------------------
 
-    u_int64_t swap_count_per_row[NUM_ROWS];
-
     // Get arguments and Calculate relevant parameters
     assert((argc == 7) && "Need 6 arguments: (ROW_HAMMER_THRESHOLD:[4.8K, 2.4K, 1.2K] SWAP_RATE:[6-10] NUM_DETERMIN_ACTS: , NUM_RANDOM_ACTS[0-5], RH_PROBABILITY_PER_REFRESH_INTERVAL, SIMULATION_ITERATION(1K per ITER)[1-10]");
     RH_THRESHOLD = atoi(argv[1]);
