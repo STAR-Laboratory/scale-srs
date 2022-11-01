@@ -1,0 +1,210 @@
+=====Used variables in the simulation====
+# of Rows (# of Buckets): 131072
+Row Hammer Threshold: 1200
+Swap Rate: 6
+Swap Threshold: 200
+# of Deterministic Access per 64ms: 475
+# of Random Guess per 64ms: 5170
+RH Probability per 64ms: 9.68e-08
+Simulation iterations: 100000
+====Iteration: 1 K====
+Current average attack time: 622265secs
+====Iteration: 2 K====
+Current average attack time: 631855secs
+====Iteration: 3 K====
+Current average attack time: 643484secs
+====Iteration: 4 K====
+Current average attack time: 637044secs
+====Iteration: 5 K====
+Current average attack time: 636635secs
+====Iteration: 6 K====
+Current average attack time: 638413secs
+====Iteration: 7 K====
+Current average attack time: 647621secs
+====Iteration: 8 K====
+Current average attack time: 647766secs
+====Iteration: 9 K====
+Current average attack time: 648164secs
+====Iteration: 10 K====
+Current average attack time: 645121secs
+====Iteration: 11 K====
+Current average attack time: 643077secs
+====Iteration: 12 K====
+Current average attack time: 643994secs
+====Iteration: 13 K====
+Current average attack time: 648159secs
+====Iteration: 14 K====
+Current average attack time: 648723secs
+====Iteration: 15 K====
+Current average attack time: 650443secs
+====Iteration: 16 K====
+Current average attack time: 651117secs
+====Iteration: 17 K====
+Current average attack time: 650804secs
+====Iteration: 18 K====
+Current average attack time: 650310secs
+====Iteration: 19 K====
+Current average attack time: 651505secs
+====Iteration: 20 K====
+Current average attack time: 653292secs
+====Iteration: 21 K====
+Current average attack time: 651339secs
+====Iteration: 22 K====
+Current average attack time: 651828secs
+====Iteration: 23 K====
+Current average attack time: 651870secs
+====Iteration: 24 K====
+Current average attack time: 651660secs
+====Iteration: 25 K====
+Current average attack time: 652489secs
+====Iteration: 26 K====
+Current average attack time: 651918secs
+====Iteration: 27 K====
+Current average attack time: 652238secs
+====Iteration: 28 K====
+Current average attack time: 652796secs
+====Iteration: 29 K====
+Current average attack time: 652406secs
+====Iteration: 30 K====
+Current average attack time: 653094secs
+====Iteration: 31 K====
+Current average attack time: 652501secs
+====Iteration: 32 K====
+Current average attack time: 652725secs
+====Iteration: 33 K====
+Current average attack time: 652568secs
+====Iteration: 34 K====
+Current average attack time: 652218secs
+====Iteration: 35 K====
+Current average attack time: 652012secs
+====Iteration: 36 K====
+Current average attack time: 651255secs
+====Iteration: 37 K====
+Current average attack time: 651356secs
+====Iteration: 38 K====
+Current average attack time: 651385secs
+====Iteration: 39 K====
+Current average attack time: 652116secs
+====Iteration: 40 K====
+Current average attack time: 652102secs
+====Iteration: 41 K====
+Current average attack time: 651984secs
+====Iteration: 42 K====
+Current average attack time: 652389secs
+====Iteration: 43 K====
+Current average attack time: 652890secs
+====Iteration: 44 K====
+Current average attack time: 653735secs
+====Iteration: 45 K====
+Current average attack time: 653303secs
+====Iteration: 46 K====
+Current average attack time: 653867secs
+====Iteration: 47 K====
+Current average attack time: 653670secs
+====Iteration: 48 K====
+Current average attack time: 653197secs
+====Iteration: 49 K====
+Current average attack time: 653818secs
+====Iteration: 50 K====
+Current average attack time: 653964secs
+====Iteration: 51 K====
+Current average attack time: 654100secs
+====Iteration: 52 K====
+Current average attack time: 653503secs
+====Iteration: 53 K====
+Current average attack time: 653698secs
+====Iteration: 54 K====
+Current average attack time: 653925secs
+====Iteration: 55 K====
+Current average attack time: 653550secs
+====Iteration: 56 K====
+Current average attack time: 653669secs
+====Iteration: 57 K====
+Current average attack time: 654295secs
+====Iteration: 58 K====
+Current average attack time: 654667secs
+====Iteration: 59 K====
+Current average attack time: 654734secs
+====Iteration: 60 K====
+Current average attack time: 654599secs
+====Iteration: 61 K====
+Current average attack time: 654397secs
+====Iteration: 62 K====
+Current average attack time: 654501secs
+====Iteration: 63 K====
+Current average attack time: 654270secs
+====Iteration: 64 K====
+Current average attack time: 654679secs
+====Iteration: 65 K====
+Current average attack time: 655091secs
+====Iteration: 66 K====
+Current average attack time: 655152secs
+====Iteration: 67 K====
+Current average attack time: 655434secs
+====Iteration: 68 K====
+Current average attack time: 655198secs
+====Iteration: 69 K====
+Current average attack time: 655040secs
+====Iteration: 70 K====
+Current average attack time: 655323secs
+====Iteration: 71 K====
+Current average attack time: 655343secs
+====Iteration: 72 K====
+Current average attack time: 655544secs
+====Iteration: 73 K====
+Current average attack time: 655630secs
+====Iteration: 74 K====
+Current average attack time: 655660secs
+====Iteration: 75 K====
+Current average attack time: 655316secs
+====Iteration: 76 K====
+Current average attack time: 655119secs
+====Iteration: 77 K====
+Current average attack time: 655068secs
+====Iteration: 78 K====
+Current average attack time: 655632secs
+====Iteration: 79 K====
+Current average attack time: 655687secs
+====Iteration: 80 K====
+Current average attack time: 655404secs
+====Iteration: 81 K====
+Current average attack time: 655963secs
+====Iteration: 82 K====
+Current average attack time: 656224secs
+====Iteration: 83 K====
+Current average attack time: 656079secs
+====Iteration: 84 K====
+Current average attack time: 655868secs
+====Iteration: 85 K====
+Current average attack time: 655830secs
+====Iteration: 86 K====
+Current average attack time: 655823secs
+====Iteration: 87 K====
+Current average attack time: 656113secs
+====Iteration: 88 K====
+Current average attack time: 655873secs
+====Iteration: 89 K====
+Current average attack time: 655992secs
+====Iteration: 90 K====
+Current average attack time: 656107secs
+====Iteration: 91 K====
+Current average attack time: 656471secs
+====Iteration: 92 K====
+Current average attack time: 656829secs
+====Iteration: 93 K====
+Current average attack time: 656676secs
+====Iteration: 94 K====
+Current average attack time: 656407secs
+====Iteration: 95 K====
+Current average attack time: 656435secs
+====Iteration: 96 K====
+Current average attack time: 656228secs
+====Iteration: 97 K====
+Current average attack time: 656438secs
+====Iteration: 98 K====
+Current average attack time: 656532secs
+====Iteration: 99 K====
+Current average attack time: 656515secs
+====Iteration: 100 K====
+Current average attack time: 656669secs
+Final Average Attack Time: 656669secs
