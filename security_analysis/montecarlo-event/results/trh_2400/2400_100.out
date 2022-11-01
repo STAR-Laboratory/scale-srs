@@ -1,0 +1,210 @@
+=====Used variables in the simulation====
+# of Rows (# of Buckets): 131072
+Row Hammer Threshold: 2400
+Swap Rate: 6
+Swap Threshold: 400
+# of Deterministic Access per 64ms: 950
+# of Random Guess per 64ms: 2841
+RH Probability per 64ms: 8.98e-09
+Simulation iterations: 100000
+====Iteration: 1 K====
+Current average attack time: 7.25323e+06secs
+====Iteration: 2 K====
+Current average attack time: 7.16427e+06secs
+====Iteration: 3 K====
+Current average attack time: 7.13172e+06secs
+====Iteration: 4 K====
+Current average attack time: 7.09015e+06secs
+====Iteration: 5 K====
+Current average attack time: 7.1239e+06secs
+====Iteration: 6 K====
+Current average attack time: 7.11555e+06secs
+====Iteration: 7 K====
+Current average attack time: 7.07929e+06secs
+====Iteration: 8 K====
+Current average attack time: 7.03452e+06secs
+====Iteration: 9 K====
+Current average attack time: 7.02578e+06secs
+====Iteration: 10 K====
+Current average attack time: 7.03612e+06secs
+====Iteration: 11 K====
+Current average attack time: 7.03912e+06secs
+====Iteration: 12 K====
+Current average attack time: 7.07905e+06secs
+====Iteration: 13 K====
+Current average attack time: 7.07584e+06secs
+====Iteration: 14 K====
+Current average attack time: 7.08069e+06secs
+====Iteration: 15 K====
+Current average attack time: 7.11728e+06secs
+====Iteration: 16 K====
+Current average attack time: 7.12608e+06secs
+====Iteration: 17 K====
+Current average attack time: 7.11647e+06secs
+====Iteration: 18 K====
+Current average attack time: 7.10197e+06secs
+====Iteration: 19 K====
+Current average attack time: 7.08465e+06secs
+====Iteration: 20 K====
+Current average attack time: 7.07235e+06secs
+====Iteration: 21 K====
+Current average attack time: 7.0757e+06secs
+====Iteration: 22 K====
+Current average attack time: 7.08785e+06secs
+====Iteration: 23 K====
+Current average attack time: 7.08317e+06secs
+====Iteration: 24 K====
+Current average attack time: 7.06878e+06secs
+====Iteration: 25 K====
+Current average attack time: 7.07011e+06secs
+====Iteration: 26 K====
+Current average attack time: 7.07129e+06secs
+====Iteration: 27 K====
+Current average attack time: 7.06831e+06secs
+====Iteration: 28 K====
+Current average attack time: 7.06117e+06secs
+====Iteration: 29 K====
+Current average attack time: 7.04862e+06secs
+====Iteration: 30 K====
+Current average attack time: 7.05508e+06secs
+====Iteration: 31 K====
+Current average attack time: 7.05952e+06secs
+====Iteration: 32 K====
+Current average attack time: 7.05525e+06secs
+====Iteration: 33 K====
+Current average attack time: 7.06203e+06secs
+====Iteration: 34 K====
+Current average attack time: 7.06799e+06secs
+====Iteration: 35 K====
+Current average attack time: 7.07013e+06secs
+====Iteration: 36 K====
+Current average attack time: 7.06244e+06secs
+====Iteration: 37 K====
+Current average attack time: 7.06766e+06secs
+====Iteration: 38 K====
+Current average attack time: 7.07343e+06secs
+====Iteration: 39 K====
+Current average attack time: 7.06233e+06secs
+====Iteration: 40 K====
+Current average attack time: 7.06291e+06secs
+====Iteration: 41 K====
+Current average attack time: 7.07323e+06secs
+====Iteration: 42 K====
+Current average attack time: 7.0827e+06secs
+====Iteration: 43 K====
+Current average attack time: 7.08072e+06secs
+====Iteration: 44 K====
+Current average attack time: 7.08427e+06secs
+====Iteration: 45 K====
+Current average attack time: 7.08911e+06secs
+====Iteration: 46 K====
+Current average attack time: 7.08846e+06secs
+====Iteration: 47 K====
+Current average attack time: 7.08582e+06secs
+====Iteration: 48 K====
+Current average attack time: 7.08728e+06secs
+====Iteration: 49 K====
+Current average attack time: 7.08831e+06secs
+====Iteration: 50 K====
+Current average attack time: 7.09764e+06secs
+====Iteration: 51 K====
+Current average attack time: 7.10375e+06secs
+====Iteration: 52 K====
+Current average attack time: 7.10166e+06secs
+====Iteration: 53 K====
+Current average attack time: 7.1061e+06secs
+====Iteration: 54 K====
+Current average attack time: 7.10818e+06secs
+====Iteration: 55 K====
+Current average attack time: 7.11059e+06secs
+====Iteration: 56 K====
+Current average attack time: 7.11253e+06secs
+====Iteration: 57 K====
+Current average attack time: 7.10727e+06secs
+====Iteration: 58 K====
+Current average attack time: 7.10901e+06secs
+====Iteration: 59 K====
+Current average attack time: 7.10778e+06secs
+====Iteration: 60 K====
+Current average attack time: 7.11235e+06secs
+====Iteration: 61 K====
+Current average attack time: 7.11119e+06secs
+====Iteration: 62 K====
+Current average attack time: 7.11177e+06secs
+====Iteration: 63 K====
+Current average attack time: 7.11082e+06secs
+====Iteration: 64 K====
+Current average attack time: 7.11177e+06secs
+====Iteration: 65 K====
+Current average attack time: 7.11132e+06secs
+====Iteration: 66 K====
+Current average attack time: 7.10822e+06secs
+====Iteration: 67 K====
+Current average attack time: 7.11086e+06secs
+====Iteration: 68 K====
+Current average attack time: 7.11188e+06secs
+====Iteration: 69 K====
+Current average attack time: 7.11245e+06secs
+====Iteration: 70 K====
+Current average attack time: 7.11571e+06secs
+====Iteration: 71 K====
+Current average attack time: 7.11153e+06secs
+====Iteration: 72 K====
+Current average attack time: 7.11358e+06secs
+====Iteration: 73 K====
+Current average attack time: 7.11218e+06secs
+====Iteration: 74 K====
+Current average attack time: 7.11211e+06secs
+====Iteration: 75 K====
+Current average attack time: 7.11469e+06secs
+====Iteration: 76 K====
+Current average attack time: 7.11512e+06secs
+====Iteration: 77 K====
+Current average attack time: 7.11297e+06secs
+====Iteration: 78 K====
+Current average attack time: 7.11141e+06secs
+====Iteration: 79 K====
+Current average attack time: 7.10871e+06secs
+====Iteration: 80 K====
+Current average attack time: 7.10427e+06secs
+====Iteration: 81 K====
+Current average attack time: 7.10661e+06secs
+====Iteration: 82 K====
+Current average attack time: 7.10419e+06secs
+====Iteration: 83 K====
+Current average attack time: 7.10354e+06secs
+====Iteration: 84 K====
+Current average attack time: 7.1019e+06secs
+====Iteration: 85 K====
+Current average attack time: 7.1033e+06secs
+====Iteration: 86 K====
+Current average attack time: 7.10443e+06secs
+====Iteration: 87 K====
+Current average attack time: 7.10092e+06secs
+====Iteration: 88 K====
+Current average attack time: 7.10104e+06secs
+====Iteration: 89 K====
+Current average attack time: 7.10165e+06secs
+====Iteration: 90 K====
+Current average attack time: 7.10363e+06secs
+====Iteration: 91 K====
+Current average attack time: 7.10009e+06secs
+====Iteration: 92 K====
+Current average attack time: 7.1015e+06secs
+====Iteration: 93 K====
+Current average attack time: 7.10418e+06secs
+====Iteration: 94 K====
+Current average attack time: 7.1027e+06secs
+====Iteration: 95 K====
+Current average attack time: 7.10062e+06secs
+====Iteration: 96 K====
+Current average attack time: 7.09996e+06secs
+====Iteration: 97 K====
+Current average attack time: 7.09931e+06secs
+====Iteration: 98 K====
+Current average attack time: 7.09927e+06secs
+====Iteration: 99 K====
+Current average attack time: 7.10111e+06secs
+====Iteration: 100 K====
+Current average attack time: 7.10225e+06secs
+Final Average Attack Time: 7.10225e+06secs

@@ -1,0 +1,51 @@
+import re
+import os
+import sys
+import subprocess
+import glob
+
+
+
+rh_threshold='4800'
+
+output_file='./../results/aggregate_trh_'+rh_threshold+'.txt'
+
+global num_instructions
+
+workload_list = open("input/rh_4800_list.txt","rt")
+result= open(output_file,'w')
+while True:
+    workload = workload_list.readline()
+    if not workload : break
+    workload_temp = workload.split()
+    workload_name= rh_threshold + '_' + workload_temp[0]+'.out'
+    result.write(workload_name+' ')
+    temp = open('./../results/trh_4800/'+workload_name,"r")
+    if temp:
+        while True:
+            line = temp.readline()
+            if not line :
+                result.write('\n')
+                break
+            # Find Simulation Iterations here
+            iter_find = re.findall(r'Simulation iterations',line)
+            if iter_find:
+                iter_temp = line.split()
+                # print(iter_temp)
+                sim_iter = iter_temp[2]
+                result.write(sim_iter+' ')
+            # Find average attack time here
+            average_attack_time_find = re.findall(r'Final Average Attack', line)
+            if average_attack_time_find:
+                average_attack_time_list = line.split()
+                # print(average_attack_time_list)
+                average_attack_time_temp = average_attack_time_list[4]
+                average_attack_time = average_attack_time_temp.split('s')
+                result.write(average_attack_time[0]+' ')
+                average_attack_time_day = float(average_attack_time[0])/3600/24
+                result.write(str(average_attack_time_day))
+    temp.close()
+workload_list.close()
+result.close()
+
+
