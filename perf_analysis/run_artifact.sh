@@ -37,7 +37,7 @@ echo ""
 echo "--> Note this fires all baseline sims: ~78 of them --> takes 7-8 hours to complete."
 echo ""
 cd simscript
-./runall_baseline.sh
+./runall_baseline.pl --w 8c_2ch_ALL_78_WL --i ALL_78_WL_name --f $firewidth --d "../output/8c_2ch_baseline" --o "2"
 cd ../ ;
 
 ## wait for baseline runs to finish
@@ -62,7 +62,7 @@ echo ""
 echo "--> Note this fires all baseline sims: ~78 of them --> takes 7-8 hours to complete."
 echo ""
 cd simscript
-./runall_srs1K.sh
+./runall_srs1K.pl --w 8c_2ch_ALL_78_WL --i ALL_78_WL_name --f $firewidth --d "../output/8c_2ch_srs1K" --o "2"
 cd ../ ;
 
 ## wait for baseline runs to finish
@@ -87,7 +87,7 @@ echo ""
 "--> Note this fires all RRS sims: ~78 of them --> takes 7-8 hours to complete."
 echo ""
 cd simscript
-./runall_srs1K.sh
+./runall_rrs1K.pl --w 8c_2ch_ALL_78_WL --i ALL_78_WL_name --f $firewidth --d "../output/8c_2ch_rrs1K" --o "2"
 cd ../ ;
 
 ## wait for RRS runs to finish
