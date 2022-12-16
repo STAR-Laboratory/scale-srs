@@ -1,4 +1,5 @@
 #  Scalable and Secure Row-Swap: Efficient and Safe Row Hammer Mitigation in Memory Systems (HPCA 2023)
+Authors: Jeonghyun Woo (University of British Columbia), Gururaj Saileshwar (University of Toronto), Prashant J. Nair (University of British Columbia)
 
 To appear in [HPCA 2023](https://hpca-conf.org/2023/)
 
@@ -11,7 +12,7 @@ This artifact covers two aspects of the results from the paper:
 
 ## Requirements for Security Evaluations for the Juggernaut Attack:
 * **Software Dependencies**: C++, Python3, g++ (tested to compile successfully with the version: 9.4.0 and 11.3.0), and Python3 Packages (pandas and matplotlib).
-* **Hardware Dependencies**: A single core CPU desktop/laptop will allow a 100,000 iterations Monte Carlo simulations in 1-3 minutes.
+* **Hardware Dependencies**: A single-core CPU desktop/laptop will allow 100,000 iterations of Monte Carlo simulations in 1-3 minutes.
 * **Data Dependencies**: Several input values, such as the number of attack rounds and the success probability of attack in a single refresh interval ($p_{k, T_S}$) in Equation 6 in the paper, are required to run the simulation. We generated these values following the equations in Section III-B in the paper and included the values in `scale-srs/security_analysis/montecarlo-event/simscript/input`.
 
 ## Steps for Security Evaluations
