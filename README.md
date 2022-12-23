@@ -19,7 +19,6 @@ This artifact covers two aspects of the results from the paper:
 
 ### Clone the artifact and run the code.
 
-<!-- TODO: Change the url after creating random GitHub repo -->
 * **Fetch the code**: `git clone https://github.com/STAR-Laboratory/scale-srs`
 * **Run the artifact**: 
 
@@ -77,7 +76,7 @@ These commands run all the following steps (compile, execute, collate results, a
 
 ### Prepare Traces and Run the artifact.
 
-* **Prepare Traces**: Download traces from this link `https://drive.google.com/file/d/1scEhit3nKWwnZwHiWLMBZ_lyNZzXoyzX/view?usp=sharing` and move them into the `scale-srs/perf_analysis/input/` folder. Downloaded file (`scale-srs-traces.tar.gz`) size should be ~8GB in size. Then change your difectory into the `scale-srs/perf_analysis/input/` folder, then type `tar -zxvf scale-srs-traces.tar.gz`. After finishing these steps, you should see `BIOBENCH, COMM, GAP, PARSEC, SPEC2K17, and SPEC2K6` folders inside the `scale-srs/perf_analysis/input/` folder. We also provide information on how traces can be generated at the end of the README.md.
+* **Prepare Traces**: You can generate traces following the instruction at the end of this README file. After generating traces, place your traces into the `scale-srs/perf_analysis/input/` folder. After finishing these steps, you should have `BIOBENCH, COMM, GAP, PARSEC, SPEC2K17, and SPEC2K6` folders inside the `scale-srs/perf_analysis/input/` folder.
 * **Run the artifact**: 
 
 			$ cd scale-srs/perf_analysis
