@@ -1,7 +1,7 @@
 #  Scalable and Secure Row-Swap: Efficient and Safe Row Hammer Mitigation in Memory Systems (HPCA 2023)
 Authors: Jeonghyun Woo (University of British Columbia), Gururaj Saileshwar (University of Toronto), Prashant J. Nair (University of British Columbia)
 
-To appear in [HPCA 2023](https://hpca-conf.org/2023/)
+Appears in [HPCA 2023](https://hpca-conf.org/2023/)
 
 ## Introduction
 This artifact covers two aspects of the results from the paper: 
